@@ -1,7 +1,9 @@
 (function ($) {
   "use strict";
   /*====Dom is loaded==== */
- 
+  document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
   /*=====AOS animation=====*/
   AOS.init({
     // Global settings:
