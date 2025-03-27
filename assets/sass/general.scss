@@ -156,70 +156,93 @@ input {
 -------------------------*/
 header {
     padding: 1.5rem 0;
-    @include position(absolute, 0, 0, 0, 0);
+    @include position(absolute, 0, 0, unset, 0);
     z-index: 11;
+
     .btn {
-        position:relative;
-      }
-      .btn-contact-btn{
+        position: relative;
+    }
+
+    .btn-contact-btn {
         border-radius: 4rem;
         background: #fff;
         -webkit-transition: all 1s ease-out;
         transition: all 1s ease-out;
-        min-height: 48px;
+        min-height: 45px;
         padding: 0 1rem;
+
         @media (min-width: 399.98px) {
-            font-size: 1.125rem;
+            font-size: 1.1rem;
         }
+
         @media (max-width: 400px) {
             font-size: 0.894rem;
         }
+
         font-family: $font-family-Bold;
-        &:not(:hover){
-            img{
+
+        &:not(:hover) {
+            img {
                 -webkit-transition: all 1s ease-out;
                 transition: all 1s ease-out;
                 display: none;
             }
         }
-        img{
+
+        img {
             @media (max-width: 767.98px) {
                 display: none;
             }
         }
-        &:hover{
+
+        &:hover {
             background: #3F3FD5;
         }
-      }
-      .content {
-         position: absolute;
-         overflow: hidden;
-         left:10px;
-         transition: top .4s ease-out;
-       }
-      
-       .top{top: 6px}
-       .bottom{top: 40px}
-       .btn:hover .top{top:-40px}
-       .btn:hover .bottom{top:6px}
-      .hover-button {
+    }
+
+    .content {
+        position: absolute;
+        overflow: hidden;
+        left: 10px;
+        transition: top .4s ease-out;
+    }
+
+    .top {
+        top: 6px
+    }
+
+    .bottom {
+        top: 40px
+    }
+
+    .btn:hover .top {
+        top: -40px
+    }
+
+    .btn:hover .bottom {
+        top: 6px
+    }
+
+    .hover-button {
         color: #fff;
-        width:100px;
+        width: 100px;
         height: 40px;
-        overflow:hidden;
+        overflow: hidden;
         border: 1px solid transparent;
         font-size: 1.3rem;
         font-family: $font-family-medium;
-        
-        &:hover{
+
+        &:hover {
             color: map_get($theme-colors, secondary);
         }
-      }
-      .menu-toggle {
+    }
+
+    .menu-toggle {
         display: none;
         font-size: 24px;
         cursor: pointer;
     }
+
     /* Responsive Styles */
     @media (max-width: 992px) {
         .nav-links {
@@ -232,143 +255,190 @@ header {
             height: 100vh;
             padding: 20px;
             border-radius: 5px;
-            transform: translateX(-100%); /* Initially hidden */
+            transform: translateX(-100%);
+            /* Initially hidden */
             transition: transform 0.5s ease-in-out;
         }
-    
+
         .menu-toggle {
             display: block;
             z-index: 12;
             cursor: pointer;
         }
-    
+
         .nav-links.active {
-            transform: translateX(0); /* Slide in */
+            transform: translateX(0);
+            /* Slide in */
         }
     }
 }
-
 
 /*-----------------------
     Banner Section
 -------------------------*/
 .banner-section {
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: cover !important;
-    min-height: 992px;
+    background: url(../image/img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
 
-    .line-vector-animation {
-        z-index: 2;
-        @include position(absolute, 280px, unset, unset, 4rem);
-        animation: fadeinout 2s infinite;
+    @media (min-width: 768px) {
+        padding-top: 200px;
+        padding-bottom: 350px;
     }
 
-    .banner-section-container {
-        // &::after {
-        //     z-index: 2;
-        //     content: url(../image/img/vector-left.png);
-        //     @include position(absolute, 50px, unset, unset, 0);
-        // }
-
-        // &::before {
-        //     z-index: 2;
-        //     content: url(../image/img/vector-right.png);
-        //     @include position(absolute, 200px, 0, unset, unset);
-
-        //     @media (max-width: 767.98px) {
-        //         display: none;
-        //     }
-        // }
+    @media (max-width: 767.98px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
 
-    .bottom-banner {
-        z-index: 2;
-        @include position(absolute, unset, 0, 0, 0);
-    }
-
-    .banner-text {
-        padding: 150px 0 100px 0;
-        z-index: 11;
-
-        &::after {
-            z-index: 2;
-            content: url(../image/img/line-left.png);
-            @include position(absolute, 50px, 0, unset, unset);
-            animation: fadeinout 2.5s infinite;
+    .right-image {
+        @media (min-width: 1199.98px) {
+            position: relative;
+            top: 30px;
         }
 
-        .banner-span {
-            padding-inline: 0.5rem;
-            border-radius: 1.5rem;
+        @media (max-width: 1200px) {
+            @include position(absolute, 100px, 0, 0, unset);
+        }
+    }
+
+    .left-image {
+
+        @media (min-width: 1199.98px) {
+            position: relative;
+            top: -70px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1200px) {
+            @include position(absolute, 100px, unset, 0, 0);
+        }
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+
+    .contant {
+        max-width: 700px;
+        z-index: 1;
+
+        .sub-title {
+            padding: 0 0.5rem;
             min-height: 40px;
+            border-radius: 1.5rem;
             border: 1px solid map_get($theme-colors, secondary);
             font-family: $font-family-medium;
-
-            @media (min-width: 992px) {
-                width: max-content;
-            }
-
         }
 
-        p {
-            @media (min-width: 1100px) {
-                font-size: 3rem;
-            }
-
-            @media (min-width: 768px) and (max-width: 1099.98px) {
-                font-size: 1.75rem;
-            }
-
-            @media (max-width: 767.98px) {
-                font-size: 1.5rem;
-            }
-
+        .main-title {
             font-family: $font-family-Bold;
-        }
-
-        .more-description {
-            font-family: $font-family-medium;
 
             @media (min-width: 992px) {
-                padding-inline: 10%;
-                font-size: 1.25rem;
+                font-size: 2.8rem;
             }
 
             @media (max-width: 991.98px) {
-                font-size: 1rem;
-            }
-
-            &::after {
-                z-index: 2;
-                content: url(../image/img/line.png);
-                @include position(absolute, 3rem, unset, unset, 6rem);
-                animation: fadeinout 3.5s infinite;
-            }
-
-            &::before {
-                z-index: 2;
-                content: url(../image/img/line-left.png);
-                @include position(absolute, 6rem, 2rem, unset, unset);
-                animation: fadeinout 6s infinite;
+                font-size: 1.5rem;
             }
         }
 
-        .btn-primary {
-            border-radius: 1rem;
-            min-height: 50px;
-            font-size: 1.5rem;
-            background: map_get($theme-colors, primary-color);
-            font-family: $font-family-Bold;
+        p {
+            font-size: 1.125rem;
+            font-family: $font-family-medium;
+        }
 
-            @media (min-width: 992px) {
-                min-width: 200px;
+        .btn-primary {
+            min-width: 200px;
+            min-height: 49px;
+            border-radius: 1rem;
+            font-size: 1.25rem;
+            font-family: $font-family-Bold;
+        }
+    }
+
+    .v-slider-frame {
+        height: 50px;
+        overflow: hidden;
+        text-align: center;
+
+        &::before {
+            @media (min-width: 768px) {
+                @include position(absolute, 0, 0, 0, unset);
+                content: ' ';
+                background: #fff;
+                color: #fff;
+                height: 100%;
+                width: 1px;
             }
         }
     }
 
+    ul.v-slides {
+        list-style-type: none;
+        transform: translateY(50px);
+        padding: 0;
+    }
+
+    .v-slide {
+        line-height: 50px;
+    }
+
+    .absolute-image {
+        img {
+            @media (min-width: 992px) {
+                height: 870px;
+                @include position(absolute, unset, 0, -70px, 0);
+            }
+
+            @media (max-width: 991.98px) {
+                @include position(absolute, unset, 0, 0, 0);
+            }
+        }
+    }
+
+    .top-left {
+        @media (min-width: 768px) {
+            @include position(absolute, -100px, 0px, unset, unset);
+            animation: fadeinout 2s infinite;
+        }
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+
+    .absolute-left {
+        @media (min-width: 768px) {
+            @include position(absolute, unset, unset, -100px, 80px);
+            animation: fadeinout 3s infinite;
+        }
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+
+    .absolute-right {
+        @media (min-width: 768px) {
+            @include position(absolute, unset, 50px, -100px, unset);
+            animation: fadeinout 4s infinite;
+        }
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
 }
 
+.animation-image {
+    animation: fadeinout 5s infinite;
+}
+
+
+
+// animation: fadeinout 2s infinite;
 @keyframes fadeinout {
     0% {
         opacity: 0;

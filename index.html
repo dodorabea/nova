@@ -73,7 +73,7 @@
                 <div class="col-lg col-4 d-flex justify-content-end">
                     <button class="btn btn-contact-btn border-0 d-flex align-items-center gap-2">
                         <span>تواصل معنا</span>
-                        <img width="24px" src="assets/image/icon/Arrow left-circle.svg" alt="icon"/>
+                        <img width="24px" src="assets/image/icon/Arrow left-circle.svg" alt="icon" />
                     </button>
                 </div>
             </div>
@@ -82,26 +82,46 @@
     <!-- ============================================================== -->
     <!-- Banner -->
     <!-- ============================================================== -->
-    <section class="banner-section position-relative overflow-hidden"
-        style="background: url(assets/image/img/banner-bg.png);">
-        <div class="container banner-section-container position-relative">
-            <img class="line-vector-animation" src="assets/image/img/line.png" alt="image" data-aos="zoom-in" />
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <!-- <div class="banner-text position-relative d-flex flex-column align-items-center justify-content-center row-gap-4" data-aos="fade-down">
-                        <span class="banner-span d-flex align-items-center justify-content-center">هذا النص هو مثال لنص يمكن يستبدل</span>
-                        <div class="d-flex align-items-center justify-content-center">
-                            <p>
-                                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة 
-                            </p>
+    <section
+        class="banner-section position-relative overflow-hidden d-flex flex-column align-items-center justify-content-center">
+            <div class="container flex-grow-1">
+                <div class="d-flex flex-wrap justify-content-between align-items-start flex-grow-1">
+                    <img class="right-image" width="170px" src="assets/image/img/vector-right.png" alt="image"
+                        data-aos="zoom-in" />
+                    <div class="contant position-relative text-center flex-grow-1 d-flex  align-items-center flex-column row-gap-4"
+                        data-aos="fade-down">
+                        <img class="top-left img-fluid"  src="assets/image/img/line-left.png" alt="image" />
+                        <span class="d-flex align-items-center justify-content-center sub-title">
+                            هذا النص هو مثال لنص يمكن يستبدل
+                        </span>
+                        <div class="row align-items-end">
+                            <div class="col-lg-10 main-title">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة </div>
+                            <div class="col-lg-2 v-slider-frame position-relative main-title">
+                                <ul class="v-slides">
+                                    <li class="v-slide">ابتكار</li>
+                                    <li class="v-slide">تطور</li>
+                                    <li class="v-slide">امان</li>
+                                </ul>
+                            </div>
                         </div>
-                        <span class="more-description position-relative">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد </span>
-                        <button class="btn btn-primary d-flex align-items-center justify-content-center">تواصل معنا </button>
-                    </div> -->
+                        <p>
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى، حيث يمكنك أن تولد
+                        </p>
+                        <button class="btn btn-primary d-flex align-items-center justify-content-center">تواصل
+                            معنا</button>
+                        <img class="absolute-left img-fluid"  src="assets/image/img/line.png" alt="image" />
+                        <img class="absolute-right img-fluid"  src="assets/image/img/line-left.png" alt="image" />
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        <img class="left-image" width="200px" src="assets/image/img/vector-left.png" alt="image" />
+                        <img class="animation-image img-fluid" src="assets/image/img/line.png" alt="image" />
+                    </div>
                 </div>
             </div>
-        </div>
-        <img class="img-fluid bottom-banner" src="assets/image/img/bottom-banner.png" alt="image" data-aos="fade-up" />
+            <div class="absolute-image">
+                <img class="img-fluid w-100" src="assets/image/img/bottom-banner.png" alt="image" data-aos="fade-up" />
+            </div>
     </section>
     <!-- ============================================================== -->
     <!-- Support Message -->
@@ -917,7 +937,27 @@
     <script src="assets/swiper/js/swiper.min.js"></script>
     <!--Main Js-->
     <script src="assets/js/main.js"></script>
+    <script>
+        var vsOpts = {
+            $slides: $('.v-slide'),
+            $list: $('.v-slides'),
+            duration: 6,
+            lineHeight: 50
+        }
 
+        var vSlide = new TimelineMax({
+            paused: true,
+            repeat: -1
+        })
+
+        vsOpts.$slides.each(function (i) {
+            vSlide.to(vsOpts.$list, vsOpts.duration / vsOpts.$slides.length, {
+                y: i * -1 * vsOpts.lineHeight,
+                ease: Elastic.easeOut.config(1, 0.4)
+            })
+        })
+        vSlide.play()
+    </script>
 </body>
 
 </html>

@@ -607,7 +607,7 @@ header {
   padding: 1.5rem 0;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: unset;
   z-index: 11;
   /* Responsive Styles */
 }
@@ -626,13 +626,13 @@ header .btn-contact-btn {
   border-radius: 4rem;
   background: #fff;
   transition: all 1s ease-out;
-  min-height: 48px;
+  min-height: 45px;
   padding: 0 1rem;
   font-family: "Tajawal-Bold", sans-serif;
 }
 @media (min-width: 399.98px) {
   header .btn-contact-btn {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
   }
 }
 @media (max-width: 400px) {
@@ -700,7 +700,8 @@ header .menu-toggle {
     height: 100vh;
     padding: 20px;
     border-radius: 5px;
-    transform: translateX(-100%); /* Initially hidden */
+    transform: translateX(-100%);
+    /* Initially hidden */
     transition: transform 0.5s ease-in-out;
   }
   html[dir=rtl] header .nav-links {
@@ -717,7 +718,8 @@ header .menu-toggle {
     cursor: pointer;
   }
   header .nav-links.active {
-    transform: translateX(0); /* Slide in */
+    transform: translateX(0);
+    /* Slide in */
   }
 }
 
@@ -725,148 +727,236 @@ header .menu-toggle {
     Banner Section
 -------------------------*/
 .banner-section {
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
-  min-height: 992px;
+  background: url(../image/img/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
-.banner-section .line-vector-animation {
-  z-index: 2;
-  position: absolute;
-  top: 280px;
-  bottom: unset;
-  animation: fadeinout 2s infinite;
-}
-html[dir=rtl] .banner-section .line-vector-animation {
-  right: unset;
-  left: 4rem;
-}
-html[dir=ltr] .banner-section .line-vector-animation {
-  right: 4rem;
-  left: unset;
-}
-.banner-section .bottom-banner {
-  z-index: 2;
-  position: absolute;
-  top: unset;
-  bottom: 0;
-}
-html[dir=rtl] .banner-section .bottom-banner {
-  right: 0;
-  left: 0;
-}
-html[dir=ltr] .banner-section .bottom-banner {
-  right: 0;
-  left: 0;
-}
-.banner-section .banner-text {
-  padding: 150px 0 100px 0;
-  z-index: 11;
-}
-.banner-section .banner-text::after {
-  z-index: 2;
-  content: url(../image/img/line-left.png);
-  position: absolute;
-  top: 50px;
-  bottom: unset;
-  animation: fadeinout 2.5s infinite;
-}
-html[dir=rtl] .banner-section .banner-text::after {
-  right: 0;
-  left: unset;
-}
-html[dir=ltr] .banner-section .banner-text::after {
-  right: unset;
-  left: 0;
-}
-.banner-section .banner-text .banner-span {
-  padding-inline: 0.5rem;
-  border-radius: 1.5rem;
-  min-height: 40px;
-  border: 1px solid #01F5F6;
-  font-family: "Tajawal-Medium", sans-serif;
-}
-@media (min-width: 992px) {
-  .banner-section .banner-text .banner-span {
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
-.banner-section .banner-text p {
-  font-family: "Tajawal-Bold", sans-serif;
-}
-@media (min-width: 1100px) {
-  .banner-section .banner-text p {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 768px) and (max-width: 1099.98px) {
-  .banner-section .banner-text p {
-    font-size: 1.75rem;
+@media (min-width: 768px) {
+  .banner-section {
+    padding-top: 200px;
+    padding-bottom: 350px;
   }
 }
 @media (max-width: 767.98px) {
-  .banner-section .banner-text p {
-    font-size: 1.5rem;
+  .banner-section {
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
-.banner-section .banner-text .more-description {
+@media (min-width: 1199.98px) {
+  .banner-section .right-image {
+    position: relative;
+    top: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner-section .right-image {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+  }
+  html[dir=rtl] .banner-section .right-image {
+    right: 0;
+    left: unset;
+  }
+  html[dir=ltr] .banner-section .right-image {
+    right: unset;
+    left: 0;
+  }
+}
+@media (min-width: 1199.98px) {
+  .banner-section .left-image {
+    position: relative;
+    top: -70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .banner-section .left-image {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+  }
+  html[dir=rtl] .banner-section .left-image {
+    right: unset;
+    left: 0;
+  }
+  html[dir=ltr] .banner-section .left-image {
+    right: 0;
+    left: unset;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-section .left-image {
+    display: none;
+  }
+}
+.banner-section .contant {
+  max-width: 700px;
+  z-index: 1;
+}
+.banner-section .contant .sub-title {
+  padding: 0 0.5rem;
+  min-height: 40px;
+  border-radius: 1.5rem;
+  border: 1px solid #01F5F6;
   font-family: "Tajawal-Medium", sans-serif;
 }
-@media (min-width: 992px) {
-  .banner-section .banner-text .more-description {
-    padding-inline: 10%;
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .banner-section .banner-text .more-description {
-    font-size: 1rem;
-  }
-}
-.banner-section .banner-text .more-description::after {
-  z-index: 2;
-  content: url(../image/img/line.png);
-  position: absolute;
-  top: 3rem;
-  bottom: unset;
-  animation: fadeinout 3.5s infinite;
-}
-html[dir=rtl] .banner-section .banner-text .more-description::after {
-  right: unset;
-  left: 6rem;
-}
-html[dir=ltr] .banner-section .banner-text .more-description::after {
-  right: 6rem;
-  left: unset;
-}
-.banner-section .banner-text .more-description::before {
-  z-index: 2;
-  content: url(../image/img/line-left.png);
-  position: absolute;
-  top: 6rem;
-  bottom: unset;
-  animation: fadeinout 6s infinite;
-}
-html[dir=rtl] .banner-section .banner-text .more-description::before {
-  right: 2rem;
-  left: unset;
-}
-html[dir=ltr] .banner-section .banner-text .more-description::before {
-  right: unset;
-  left: 2rem;
-}
-.banner-section .banner-text .btn-primary {
-  border-radius: 1rem;
-  min-height: 50px;
-  font-size: 1.5rem;
-  background: #3F3FD5;
+.banner-section .contant .main-title {
   font-family: "Tajawal-Bold", sans-serif;
 }
 @media (min-width: 992px) {
-  .banner-section .banner-text .btn-primary {
-    min-width: 200px;
+  .banner-section .contant .main-title {
+    font-size: 2.8rem;
   }
+}
+@media (max-width: 991.98px) {
+  .banner-section .contant .main-title {
+    font-size: 1.5rem;
+  }
+}
+.banner-section .contant p {
+  font-size: 1.125rem;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.banner-section .contant .btn-primary {
+  min-width: 200px;
+  min-height: 49px;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.banner-section .v-slider-frame {
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .banner-section .v-slider-frame::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: " ";
+    background: #fff;
+    color: #fff;
+    height: 100%;
+    width: 1px;
+  }
+  html[dir=rtl] .banner-section .v-slider-frame::before {
+    right: 0;
+    left: unset;
+  }
+  html[dir=ltr] .banner-section .v-slider-frame::before {
+    right: unset;
+    left: 0;
+  }
+}
+.banner-section ul.v-slides {
+  list-style-type: none;
+  transform: translateY(50px);
+  padding: 0;
+}
+.banner-section .v-slide {
+  line-height: 50px;
+}
+@media (min-width: 992px) {
+  .banner-section .absolute-image img {
+    height: 870px;
+    position: absolute;
+    top: unset;
+    bottom: -70px;
+  }
+  html[dir=rtl] .banner-section .absolute-image img {
+    right: 0;
+    left: 0;
+  }
+  html[dir=ltr] .banner-section .absolute-image img {
+    right: 0;
+    left: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  .banner-section .absolute-image img {
+    position: absolute;
+    top: unset;
+    bottom: 0;
+  }
+  html[dir=rtl] .banner-section .absolute-image img {
+    right: 0;
+    left: 0;
+  }
+  html[dir=ltr] .banner-section .absolute-image img {
+    right: 0;
+    left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .banner-section .top-left {
+    position: absolute;
+    top: -100px;
+    bottom: unset;
+    animation: fadeinout 2s infinite;
+  }
+  html[dir=rtl] .banner-section .top-left {
+    right: 0px;
+    left: unset;
+  }
+  html[dir=ltr] .banner-section .top-left {
+    right: unset;
+    left: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-section .top-left {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .banner-section .absolute-left {
+    position: absolute;
+    top: unset;
+    bottom: -100px;
+    animation: fadeinout 3s infinite;
+  }
+  html[dir=rtl] .banner-section .absolute-left {
+    right: unset;
+    left: 80px;
+  }
+  html[dir=ltr] .banner-section .absolute-left {
+    right: 80px;
+    left: unset;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-section .absolute-left {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .banner-section .absolute-right {
+    position: absolute;
+    top: unset;
+    bottom: -100px;
+    animation: fadeinout 4s infinite;
+  }
+  html[dir=rtl] .banner-section .absolute-right {
+    right: 50px;
+    left: unset;
+  }
+  html[dir=ltr] .banner-section .absolute-right {
+    right: unset;
+    left: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner-section .absolute-right {
+    display: none;
+  }
+}
+
+.animation-image {
+  animation: fadeinout 5s infinite;
 }
 
 @keyframes fadeinout {

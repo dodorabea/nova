@@ -1,9 +1,11 @@
 (function ($) {
   "use strict";
-  /*====Dom is loaded==== */
+  /*====Header==== */
   document.querySelector(".menu-toggle").addEventListener("click", function () {
     document.querySelector(".nav-links").classList.toggle("active");
 });
+
+
   /*=====AOS animation=====*/
   AOS.init({
     // Global settings:
@@ -36,14 +38,8 @@
   var brandSwiper = new Swiper(".mySwiper.brands", {
     slidesPerView: 1.75,
     spaceBetween: 10,
-    // speed: 18000,
-    // direction: "horizontal",
     loop: true,
-   // autoplay:true,
-    // autoplay: {
-    //   delay: 0,
-    // },
-    // freeMode: true,
+   autoplay:true,
     breakpoints: {
       0: {
         slidesPerView: 1.75,
