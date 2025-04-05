@@ -587,6 +587,11 @@ input {
   -webkit-text-fill-color: transparent;
   font-family: "Tajawal-Bold", sans-serif;
 }
+@media (min-width: 1200px) {
+  .titel-section {
+    font-size: 2.5rem;
+  }
+}
 
 .title-section-part {
   margin-bottom: 2.5rem;
@@ -626,7 +631,8 @@ header .btn-contact-btn {
   border-radius: 4rem;
   background: #fff;
   transition: all 1s ease-out;
-  min-height: 45px;
+  min-height: 47px;
+  min-width: 165px;
   padding: 0 1rem;
   font-family: "Tajawal-Bold", sans-serif;
 }
@@ -651,6 +657,16 @@ header .btn-contact-btn:not(:hover) img {
 }
 header .btn-contact-btn:hover {
   background: #3F3FD5;
+}
+@media (min-width: 992px) {
+  header .header-logo-part {
+    justify-content: center;
+  }
+}
+@media (max-width: 991.98px) {
+  header .header-logo-part {
+    justify-content: end;
+  }
 }
 header .content {
   position: absolute;
@@ -696,7 +712,7 @@ header .menu-toggle {
     top: 0;
     bottom: 0;
     z-index: 11;
-    width: 50%;
+    width: 70%;
     height: 100vh;
     padding: 20px;
     border-radius: 5px;
@@ -721,6 +737,9 @@ header .menu-toggle {
     transform: translateX(0);
     /* Slide in */
   }
+}
+header .contact-link {
+  font-size: 1.3rem;
 }
 
 /*-----------------------
@@ -817,8 +836,12 @@ header .menu-toggle {
   }
 }
 .banner-section .contant p {
-  font-size: 1.125rem;
   font-family: "Tajawal-Medium", sans-serif;
+}
+@media (min-width: 992px) {
+  .banner-section .contant p {
+    font-size: 1.125rem;
+  }
 }
 .banner-section .contant .btn-primary {
   min-width: 200px;
@@ -832,7 +855,7 @@ header .menu-toggle {
   overflow: hidden;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .banner-section .v-slider-frame::before {
     position: absolute;
     top: 0;
@@ -990,6 +1013,12 @@ header .menu-toggle {
 }
 .support-message-card .text h4 {
   font-family: "Tajawal-Bold", sans-serif;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .support-message-card:not(:hover) {
   background: rgba(63, 63, 213, 0.3);
@@ -1015,6 +1044,11 @@ header .menu-toggle {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 1200px) {
+  .user-guidance .titel {
+    font-size: 2.5rem;
+  }
 }
 .user-guidance .user-guidance-card {
   padding: 1.5rem 1rem;
@@ -1106,7 +1140,6 @@ header .menu-toggle {
   background: rgba(63, 63, 213, 0.1);
 }
 .nova-innovation-text .title-part {
-  font-size: 2rem;
   line-height: normal;
   background: linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
   background: -webkit-linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
@@ -1115,13 +1148,18 @@ header .menu-toggle {
   -webkit-text-fill-color: transparent;
   font-family: "Tajawal-Bold", sans-serif;
 }
+@media (min-width: 1200px) {
+  .nova-innovation-text .title-part {
+    font-size: 2rem;
+  }
+}
 .nova-innovation-text .title-part span {
   line-height: 2.5rem;
 }
 .nova-innovation-text p {
-  font-size: 1.25rem;
   color: #B4B4B4;
   font-family: "Tajawal-Medium", sans-serif;
+  font-size: 1rem;
 }
 .nova-innovation .nova-innovation-card {
   padding: 0.5rem;
@@ -1185,16 +1223,23 @@ header .menu-toggle {
   font-family: "Tajawal-Bold", sans-serif;
 }
 .why-choose-our-tech .why-choose-title-part p {
-  font-size: 1.45rem;
   color: #B4B4B4;
   font-family: "Tajawal-Medium", sans-serif;
 }
 @media (min-width: 992px) {
+  .why-choose-our-tech .why-choose-title-part p {
+    font-size: 1.4rem;
+  }
   html[dir=rtl] .why-choose-our-tech .why-choose-title-part p {
     padding-left: 5%;
   }
   html[dir=ltr] .why-choose-our-tech .why-choose-title-part p {
     padding-right: 5%;
+  }
+}
+@media (max-width: 991.98px) {
+  .why-choose-our-tech .why-choose-title-part p {
+    font-size: 1rem;
   }
 }
 .why-choose-our-tech .why-choose-title-part p:not(:last-child) {
@@ -1392,13 +1437,75 @@ html[dir=ltr] .nava-section-image::after {
 /*-----------------------
     Customer Reviews
 -------------------------*/
+.customer-reviews .titel {
+  font-size: 2.5rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.customer-reviews-card {
+  border-radius: 1rem;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  border: 0.6px solid #3F3FD5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: all 1s ease-out;
+}
+.customer-reviews-card .card-header-image {
+  inline-size: 48px;
+  min-inline-size: 48px;
+  max-inline-size: 48px;
+  block-size: 48px;
+  border-radius: 100%;
+}
+.customer-reviews-card .card-header-text h5 {
+  font-size: 1.5rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.customer-reviews-card .card-header-text P {
+  color: #B4B4B4;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.customer-reviews-card .card-body p {
+  color: #E1E1E1;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.customer-reviews-card:not(:hover) {
+  background: rgba(63, 63, 213, 0.3);
+}
+.customer-reviews-card:hover {
+  background: rgba(1, 245, 246, 0.5);
+}
+.customer-reviews .swiper-slide {
+  transition: all 0.5s ease-out;
+}
+.customer-reviews .swiper-slide:not(.customer-reviews .swiper-slide-active) {
+  margin-top: 11rem;
+}
+.customer-reviews .swiper-slide-active .customer-reviews-card {
+  background: rgba(1, 245, 246, 0.5);
+}
+.customer-reviews .arrow-slider .swiper-btn {
+  inline-size: 48px;
+  min-inline-size: 48px;
+  max-inline-size: 48px;
+  block-size: 48px;
+  border-radius: 100%;
+  color: #fff;
+  background: #3F3FD5;
+}
+.customer-reviews .arrow-slider .swiper-btn::after, .customer-reviews .arrow-slider .swiper-btn::before {
+  font-size: 1.125rem;
+}
+
 /*-----------------------
    Common-Question
 -------------------------*/
 .common-question .title-common-question {
-  font-size: 2.25rem;
   margin-bottom: 2.5rem;
   font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 1200px) {
+  .common-question .title-common-question {
+    font-size: 2.25rem;
+  }
 }
 
 .accordion .accordion-item:has(.accordion-button:not(.collapsed)) {
@@ -1419,6 +1526,7 @@ html[dir=ltr] .nava-section-image::after {
 .accordion .accordion-button.collapsed {
   border: 0.3px solid #01F5F6 !important;
   background: #3F3FD5;
+  width: calc(100% - 5px);
 }
 .accordion .accordion-button {
   font-size: 1rem;

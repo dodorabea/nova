@@ -68,4 +68,32 @@
     direction: "vertical",
     autoplay:true,
   });
+/*====Text Slider==== */
+  var customerSwiper = new Swiper(".mySwiper.customerSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay:true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
+      },
+      400: {
+        slidesPerView: 1.5,
+      },
+      880: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1366: {
+        slidesPerView: 3,
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 })(jQuery);
