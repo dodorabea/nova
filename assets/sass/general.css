@@ -1927,7 +1927,8 @@ button.back-to-top.show:active {
     line-height: 3rem;
   }
 }
-.about-banner-text h1 .challenges::after, .about-banner-text h1 .solutions::after {
+.about-banner-text h1 .challenges::after,
+.about-banner-text h1 .solutions::after {
   content: "";
   position: absolute;
   top: unset;
@@ -1936,11 +1937,13 @@ button.back-to-top.show:active {
   width: calc(100% - 5px);
   min-height: 43px;
 }
-html[dir=rtl] .about-banner-text h1 .challenges::after, html[dir=rtl] .about-banner-text h1 .solutions::after {
+html[dir=rtl] .about-banner-text h1 .challenges::after,
+html[dir=rtl] .about-banner-text h1 .solutions::after {
   right: 0;
   left: 0;
 }
-html[dir=ltr] .about-banner-text h1 .challenges::after, html[dir=ltr] .about-banner-text h1 .solutions::after {
+html[dir=ltr] .about-banner-text h1 .challenges::after,
+html[dir=ltr] .about-banner-text h1 .solutions::after {
   right: 0;
   left: 0;
 }
@@ -1969,4 +1972,96 @@ html[dir=ltr] .about-banner-text h1 .challenges::after, html[dir=ltr] .about-ban
   .about-banner-text p {
     font-size: 1rem;
   }
+}
+
+/*-----------------------
+    Tech Partner
+-------------------------*/
+.tech-partner-title {
+  font-family: "Tajawal-Bold", sans-serif;
+  line-height: normal;
+  margin-bottom: 3rem;
+}
+@media (min-width: 992px) {
+  .tech-partner-title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .tech-partner-title {
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+  }
+}
+.tech-partner-title .title-line::after {
+  content: "";
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  display: block;
+  width: calc(100% - 5px);
+  min-height: 43px;
+  background: url(../image/icon/line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+html[dir=rtl] .tech-partner-title .title-line::after {
+  right: 0;
+  left: 0;
+}
+html[dir=ltr] .tech-partner-title .title-line::after {
+  right: 0;
+  left: 0;
+}
+.tech-partner-card {
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  min-height: 420px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.tech-partner-card h4 {
+  line-height: normal;
+  font-family: "Tajawal-Bold", sans-serif;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 992px) {
+  .tech-partner-card h4 {
+    font-size: 1.25rem;
+  }
+}
+.tech-partner-card h3 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 992px) {
+  .tech-partner-card h3 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .tech-partner-card h3 {
+    font-size: 2rem;
+  }
+}
+.tech-partner-card span {
+  font-size: 1.25rem;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.tech-partner-card p {
+  line-height: normal;
+  font-family: "Tajawal-Medium", sans-serif;
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=general.css.map */
