@@ -605,6 +605,41 @@ input {
   font-family: "Tajawal-Medium", sans-serif;
 }
 
+.btn-contact-btn {
+  border-radius: 4rem;
+  background: #fff;
+  transition: all 1s ease-out;
+  min-height: 47px;
+  min-width: 165px;
+  padding: 0 1rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 399.98px) {
+  .btn-contact-btn {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 400px) {
+  .btn-contact-btn {
+    font-size: 0.894rem;
+  }
+}
+.btn-contact-btn:not(:hover) img {
+  transition: all 1s ease-out;
+  display: none;
+}
+.btn-contact-btn img {
+  transition: all 1s ease-out;
+}
+@media (max-width: 767.98px) {
+  .btn-contact-btn img {
+    display: none;
+  }
+}
+.btn-contact-btn:hover {
+  background: #3F3FD5;
+}
+
 /*-----------------------
     Header
 -------------------------*/
@@ -626,37 +661,6 @@ html[dir=ltr] header {
 }
 header .btn {
   position: relative;
-}
-header .btn-contact-btn {
-  border-radius: 4rem;
-  background: #fff;
-  transition: all 1s ease-out;
-  min-height: 47px;
-  min-width: 165px;
-  padding: 0 1rem;
-  font-family: "Tajawal-Bold", sans-serif;
-}
-@media (min-width: 399.98px) {
-  header .btn-contact-btn {
-    font-size: 1.1rem;
-  }
-}
-@media (max-width: 400px) {
-  header .btn-contact-btn {
-    font-size: 0.894rem;
-  }
-}
-header .btn-contact-btn:not(:hover) img {
-  transition: all 1s ease-out;
-  display: none;
-}
-@media (max-width: 767.98px) {
-  header .btn-contact-btn img {
-    display: none;
-  }
-}
-header .btn-contact-btn:hover {
-  background: #3F3FD5;
 }
 @media (min-width: 992px) {
   header .header-logo-part {
@@ -1554,6 +1558,64 @@ html[dir=ltr] .nava-section-image::after {
 }
 
 /*-----------------------
+    Blog Section
+-------------------------*/
+.blog-section-title {
+  margin-bottom: 2.5rem;
+}
+.blog-section-title h2 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.blog-section-title p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .blog-section-title p {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .blog-section-title p {
+    font-size: 1rem;
+  }
+}
+.blog-section-card p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .blog-section-card p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .blog-section-card p {
+    font-size: 1rem;
+  }
+}
+.blog-section-card .card-header {
+  padding: 4.5rem 1rem 2rem 1rem;
+  border-radius: 1.5rem;
+  background: url(../image/img/card-image.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-section-card .card-header p {
+  min-height: 60px;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-section-card .card-body {
+  padding: 0rem 1rem 1rem 1rem;
+}
+.blog-section-card .card-body span {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+
+/*-----------------------
     Footer
 -------------------------*/
 footer .footer-description p {
@@ -1679,4 +1741,107 @@ button.back-to-top.show:active {
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+/*-----------------------
+    Breadcrumb
+-------------------------*/
+.breadcrumb-section {
+  padding: 150px 0 0px 0;
+}
+.breadcrumb-section .breadcrumb-item + .breadcrumb-item::before {
+  content: url(../image/icon/breadcrumb.svg);
+}
+.breadcrumb-section .breadcrumb-item {
+  font-size: 0.849rem;
+}
+
+/*-----------------------
+    Technical Skills
+-------------------------*/
+.technical-skills-title span {
+  color: #01F5F6;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .technical-skills-title span {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .technical-skills-title span {
+    font-size: 1rem;
+  }
+}
+.technical-skills-title p {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.technical-skills-box {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(63, 63, 213, 0.2784313725);
+  border: 1px solid #3F3FD5;
+}
+
+/*-----------------------
+    About Banner
+-------------------------*/
+.about-banner-text {
+  row-gap: 2rem;
+}
+.about-banner-text h1 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 1200px) {
+  .about-banner-text h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1199.98px) {
+  .about-banner-text h1 {
+    line-height: 3rem;
+  }
+}
+.about-banner-text h1 .challenges::after, .about-banner-text h1 .solutions::after {
+  content: "";
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  display: block;
+  width: calc(100% - 5px);
+  min-height: 43px;
+}
+html[dir=rtl] .about-banner-text h1 .challenges::after, html[dir=rtl] .about-banner-text h1 .solutions::after {
+  right: 0;
+  left: 0;
+}
+html[dir=ltr] .about-banner-text h1 .challenges::after, html[dir=ltr] .about-banner-text h1 .solutions::after {
+  right: 0;
+  left: 0;
+}
+.about-banner-text h1 .challenges::after {
+  background: url(../image/icon/vector-digital.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.about-banner-text h1 .solutions::after {
+  background: url(../image/icon/analog-line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.about-banner-text p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 992px) {
+  .about-banner-text p {
+    padding-inline: 10%;
+    font-size: 1.35rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .about-banner-text p {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=general.css.map */
