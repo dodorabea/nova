@@ -2064,4 +2064,233 @@ html[dir=ltr] .tech-partner-title .title-line::after {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/*-----------------------
+    Cards
+-------------------------*/
+.card-section .card {
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 1s ease-out;
+}
+.card-section .card h2 {
+  background: linear-gradient(220deg, #01F7F8 0%, #7C44DD 100%);
+  background: -webkit-linear-gradient(220deg, #01F7F8 0%, #7C44DD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .card-section .card h2 {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .card-section .card h2 {
+    font-size: 2rem;
+  }
+}
+.card-section .card p {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+@media (min-width: 992px) {
+  .card-section .card p {
+    padding-inline-end: 3%;
+  }
+}
+.card-section .card ul li::before {
+  content: "";
+  min-inline-size: 1.125rem;
+  max-inline-size: 1.125rem;
+  block-size: 1.125rem;
+  border-radius: 100%;
+}
+.card-section .card:not(:hover) {
+  background: linear-gradient(123.89deg, #FFFFFF 1.73%, #F7F7F7 95.19%, #F7F7F7 99.09%);
+}
+.card-section .card:not(:hover) ul li {
+  color: #000;
+}
+.card-section .card:not(:hover) ul li::before {
+  border: 2px solid #000000;
+}
+.card-section .card:hover {
+  background: linear-gradient(123.89deg, #0E0E5F 1.73%, #0E0E5F 95.19%, #0E0E5F 99.09%);
+}
+.card-section .card:hover p {
+  color: #fff;
+  transition: color 0.8s ease-in-out;
+}
+.card-section .card:hover ul li {
+  color: #fff;
+  transition: color 0.8s ease-in-out;
+}
+.card-section .card:hover ul li::before {
+  transition: border 0.8s ease-in-out;
+  border: 2px solid #01F5F6;
+}
+
+/*-----------------------
+    Our Projects
+-------------------------*/
+.our-projects-title p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.our-projects-card .card-header {
+  height: 275px;
+  border-radius: 1rem;
+}
+.our-projects-card .card-header img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+html[dir=rtl] .our-projects-card .card-header img {
+  right: 0;
+  left: 0;
+}
+html[dir=ltr] .our-projects-card .card-header img {
+  right: 0;
+  left: 0;
+}
+.our-projects-card:not(:hover) .card-header .img-default {
+  opacity: 1;
+}
+.our-projects-card:not(:hover) .card-header .img-hover {
+  opacity: 0;
+}
+.our-projects-card:hover .card-header .img-default {
+  opacity: 0;
+}
+.our-projects-card:hover .card-header .img-hover {
+  opacity: 1;
+}
+.our-projects-card .card-body span {
+  color: #fff;
+  min-inline-size: 85px;
+  min-block-size: 30px;
+  border: 1px solid #FFFFFF;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+@media (max-width: 567.98px) {
+  .our-projects-card .card-body span {
+    min-inline-size: 100%;
+  }
+}
+.our-projects-card .card-body h5 {
+  color: #fff;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .our-projects-card .card-body h5 {
+    font-size: 1.5rem;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.our-projects-card .card-body p {
+  color: #E1E1E1;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+@media (min-width: 992px) {
+  .our-projects-card .card-body p {
+    padding-inline-end: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .our-projects-card .card-body p {
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/*-----------------------
+    Innovate Code Launch
+-------------------------*/
+.innovate-code-launch .custome-row-gap {
+  row-gap: 2rem;
+}
+.innovate-code-launch-title {
+  row-gap: 2rem;
+}
+.innovate-code-launch-title h2 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 1250px) {
+  .innovate-code-launch-title h2 {
+    font-size: 3.75rem;
+  }
+}
+.innovate-code-launch-title h2 span {
+  line-height: normal;
+  background: linear-gradient(270deg, #01F7F8 0%, #7C44DD 100%);
+  background: -webkit-linear-gradient(270deg, #01F7F8 0%, #7C44DD 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.innovate-code-launch-title h2 span::after {
+  content: "";
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  min-height: 43px;
+  background: url(../image/icon/analog-line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+html[dir=rtl] .innovate-code-launch-title h2 span::after {
+  right: 0;
+  left: 0;
+}
+html[dir=ltr] .innovate-code-launch-title h2 span::after {
+  right: 0;
+  left: 0;
+}
+.innovate-code-launch-title p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .innovate-code-launch-title p {
+    font-size: 1.25rem;
+  }
+}
+.innovate-code-launch .counters h6 {
+  line-height: normal;
+  background: linear-gradient(270deg, #7C44DD 0%, #01F7F8 100%);
+  background: -webkit-linear-gradient(270deg, #7C44DD 0%, #01F7F8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .innovate-code-launch .counters h6 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .innovate-code-launch .counters h6 {
+    font-size: 1.125rem;
+  }
+}
+.innovate-code-launch .counters .counter-name {
+  font-family: "Tajawal-Medium", sans-serif;
 }/*# sourceMappingURL=general.css.map */

@@ -1452,6 +1452,7 @@ button.back-to-top.show:active {
         }
     }
 }
+
 .contact-form-section {
     background-color: #f4f4f4;
     position: relative;
@@ -1541,6 +1542,7 @@ button.back-to-top.show:active {
         background-color: #01f5f6;
     }
 }
+
 /*-----------------------
     About Banner
 -------------------------*/
@@ -1604,22 +1606,26 @@ button.back-to-top.show:active {
         }
     }
 }
+
 /*-----------------------
     Tech Partner
 -------------------------*/
-.tech-partner{
-    &-title{
+.tech-partner {
+    &-title {
         font-family: $font-family-Bold;
         line-height: normal;
         margin-bottom: 3rem;
-        @media (min-width: 992px){
+
+        @media (min-width: 992px) {
             font-size: 1.8rem;
         }
-        @media (max-width: 991.98px){
+
+        @media (max-width: 991.98px) {
             font-size: 1.25rem;
             line-height: 1.7rem;
         }
-        .title-line{
+
+        .title-line {
             &::after {
                 content: '';
                 @include position(absolute, unset, 0, 0, 0);
@@ -1633,14 +1639,16 @@ button.back-to-top.show:active {
             }
         }
     }
-    &-card{
+
+    &-card {
         padding: 2rem 1rem;
         border-radius: 1rem;
         min-height: 420px;
         background-repeat: no-repeat !important;
         background-size: cover !important;
         background-position: center !important;
-        h4{
+
+        h4 {
             line-height: normal;
             font-family: $font-family-Bold;
             display: -webkit-box;
@@ -1649,25 +1657,31 @@ button.back-to-top.show:active {
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+
             @media (min-width: 992px) {
                 font-size: 1.25rem;
             }
         }
-        h3{
+
+        h3 {
             font-family: $font-family-Bold;
-            @media (min-width: 992px){
+
+            @media (min-width: 992px) {
                 font-size: 4rem;
                 line-height: 3.5rem;
             }
-            @media (max-width: 991.98px){
+
+            @media (max-width: 991.98px) {
                 font-size: 2rem;
             }
         }
-        span{
+
+        span {
             font-size: 1.25rem;
             font-family: $font-family-medium;
         }
-        p{
+
+        p {
             line-height: normal;
             font-family: $font-family-medium;
             display: -webkit-box;
@@ -1676,6 +1690,254 @@ button.back-to-top.show:active {
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+        }
+    }
+}
+
+/*-----------------------
+    Cards
+-------------------------*/
+.card-section {
+    .card {
+        padding: 2rem 1.5rem;
+        border-radius: 0.5rem;
+        -webkit-transition: all 1s ease-out;
+        transition: all 1s ease-out;
+
+        h2 {
+            background: linear-gradient(220deg, #01F7F8 0%, #7C44DD 100%);
+            background: -webkit-linear-gradient(220deg, #01F7F8 0%, #7C44DD 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: $font-family-Bold;
+
+            @media (min-width: 768px) {
+                font-size: 3.75rem;
+            }
+
+            @media (max-width: 767.98px) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-family: $font-family-medium;
+
+            @media (min-width: 992px) {
+                padding-inline-end: 3%;
+            }
+        }
+
+        ul {
+            li {
+                &::before {
+                    content: '';
+                    min-inline-size: 1.125rem;
+                    max-inline-size: 1.125rem;
+                    block-size: 1.125rem;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        &:not(:hover) {
+            background: linear-gradient(123.89deg, #FFFFFF 1.73%, #F7F7F7 95.19%, #F7F7F7 99.09%);
+
+            ul {
+                li {
+                    color: #000;
+
+                    &::before {
+                        border: 2px solid #000000;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: linear-gradient(123.89deg, #0E0E5F 1.73%, #0E0E5F 95.19%, #0E0E5F 99.09%);
+
+            p {
+                color: #fff;
+                transition: color 0.8s ease-in-out;
+            }
+
+            ul {
+                li {
+                    color: #fff;
+                    transition: color 0.8s ease-in-out;
+
+                    &::before {
+                        transition: border 0.8s ease-in-out;
+                        border: 2px solid map_get($theme-colors, secondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------
+    Our Projects
+-------------------------*/
+.our-projects {
+    &-title {
+        p {
+            font-family: $font-family-Bold;
+        }
+    }
+
+    &-card {
+        .card-header {
+            height: 275px;
+            border-radius: 1rem;
+
+            img {
+                @include position(absolute, 0, 0, 0, 0);
+                object-fit: cover;
+                transition: opacity 0.4s ease-in-out;
+            }
+
+        }
+
+        &:not(:hover) {
+            .card-header {
+                .img-default {
+                    opacity: 1;
+                }
+
+                .img-hover {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .card-header {
+                .img-default {
+                    opacity: 0;
+                }
+
+                .img-hover {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+        .card-body {
+            span {
+                color: #fff;
+                min-inline-size: 85px;
+                min-block-size: 30px;
+                border: 1px solid #FFFFFF;
+                font-family: $font-family-medium;
+
+                @media (max-width: 567.98px) {
+                    min-inline-size: 100%;
+                }
+            }
+
+            h5 {
+                color: #fff;
+
+                @media (min-width: 768px) {
+                    font-size: 1.5rem;
+                    display: -webkit-box;
+                    line-clamp: 1;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                font-family: $font-family-Bold;
+
+            }
+
+            p {
+                color: #E1E1E1;
+                font-family: $font-family-medium;
+
+                @media (min-width: 992px) {
+                    padding-inline-end: 10%;
+                }
+
+                @media (min-width: 768px) {
+                    display: -webkit-box;
+                    line-clamp: 2;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------
+    Innovate Code Launch
+-------------------------*/
+.innovate-code-launch {
+    .custome-row-gap{
+        row-gap: 2rem;
+    }
+    &-title {
+        row-gap: 2rem;
+        h2 {
+            font-family: $font-family-Bold;
+            @media (min-width: 1250px) {
+                font-size: 3.75rem;
+            }
+            span {
+                line-height: normal;
+                background: linear-gradient(270deg, #01F7F8 0%, #7C44DD 100%);
+                background: -webkit-linear-gradient(270deg, #01F7F8 0%, #7C44DD 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &::after {
+                    content: '';
+                    @include position(absolute, unset, 0, 0, 0);
+                    display: block;
+                    width: 50%;
+                    margin: 0 auto;
+                    min-height: 43px;
+                    background: url(../image/icon/analog-line.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+
+        }
+        p{
+            @media (min-width: 768px) {
+                font-size: 1.25rem;
+            }
+            font-family: $font-family-Bold;
+        }
+    }
+    .counters{
+        h6{
+            @media (min-width: 768px) {
+                font-size: 2rem;
+            }
+            @media (max-width: 767.98px) {
+                font-size: 1.125rem;
+            }
+            line-height: normal;
+            background: linear-gradient(270deg, #7C44DD 0%, #01F7F8 100%);
+            background: -webkit-linear-gradient(270deg, #7C44DD 0%, #01F7F8 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            font-family: $font-family-Bold;
+        }
+        .counter-name{
+            font-family: $font-family-medium;
         }
     }
 }
