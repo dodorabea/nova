@@ -1876,6 +1876,287 @@ button.back-to-top.show:active {
         }
     }
 }
+/*-----------------------
+    services
+-------------------------*/
+.services-info-section {
+  padding-block: 80px;
+
+  .service-info {
+    h3 {
+      max-width: 80%;
+      font-size: 64px;
+      font-weight: 800;
+      font-family: $font-family-Bold;
+      background: linear-gradient(to right, #7c44dd, #01f7f8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 1200px) {
+        font-size: 56px;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      @media (max-width: 767.98px) {
+        font-size: 36px;
+        text-align: center;
+
+        padding-block: 20px;
+      }
+    }
+    p {
+      margin-block-start: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      max-width: 70%;
+      @media (max-width: 1200px) {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .service-card-info {
+    border-radius: 16px;
+    color: #000;
+    padding: 20px;
+    margin-block-start: 20px;
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      margin-block-start: 10px;
+      font-size: 16px;
+    }
+    &.odd {
+      background: linear-gradient(to right, #7e8cff, #ffffff);
+    }
+    &.even {
+      background: linear-gradient(to right, #8dffff, #c9ffff, #ffffff);
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 32px;
+    padding-block: 20px;
+  }
+}
+
+.services-steps-section {
+  padding-block: 60px;
+  padding-inline: 60px;
+
+  .stages-container {
+    background-color: #060335;
+    max-width: 1400px;
+    padding: 30px 0;
+  }
+  .stages-row {
+    padding-block: 20px;
+    padding-inline: 80px;
+  }
+  /* Stage Column Styles */
+  .stage-column {
+    position: relative;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #00b8d4;
+    }
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #00b8d4;
+    }
+  }
+
+  /* Stage Header Styles */
+  .stage-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Stage Card Styles */
+  .stage-card {
+    width: 100%;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow during transition */
+    height: 80px; /* Set a fixed initial height */
+    display: flex;
+    align-items: center;
+    /* Default Content Styles */
+    .default-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      position: absolute;
+      width: calc(100% - 2rem); /* Account for padding */
+      height: 100%;
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    }
+
+    /* Hover Content Styles */
+    .hover-content {
+      position: relative;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease 0.1s; /* Slight delay for better effect */
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      padding-top: 20px; /* Space for default content */
+
+      h5 {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        padding-right: 1.5rem;
+        margin-bottom: 0;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Hover Effect */
+    &:hover {
+      height: auto; /* Let the height adjust to content */
+      min-height: 250px; /* Set a minimum height to prevent too small cards */
+
+      .default-content {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      .hover-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .stage-card-empty {
+    height: 60px; /* Set a fixed initial height */
+    width: 100%;
+  }
+  /* Card Colors and Hover States */
+  .exploration {
+    background-color: #28a745;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .planning {
+    background-color: #dc3545;
+
+    &:hover {
+      background-color: #c82333;
+    }
+  }
+
+  .design {
+    background-color: #7b1fa2;
+
+    &:hover {
+      background-color: #6a1b9a;
+    }
+  }
+
+  .development {
+    background-color: #e65100;
+
+    &:hover {
+      background-color: #d84315;
+    }
+  }
+
+  .testing {
+    background-color: #0288d1;
+
+    &:hover {
+      background-color: #0277bd;
+    }
+  }
+
+  .launch {
+    background-color: #1a237e;
+
+    &:hover {
+      background-color: #0d1257;
+    }
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .services-steps-section {
+      padding-inline: 10px!important;
+    }
+    .stages-row {
+      flex-direction: column;
+      padding-inline: 20px!important;
+    }
+
+    .stage-column {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 2rem;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .stage-card {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .stage-card-empty {
+      height: 0px; /* Set a fixed initial height */
+      width: 100%;
+    }
+  }
+}
 
 /*-----------------------
     Innovate Code Launch
@@ -1886,6 +2167,12 @@ button.back-to-top.show:active {
     }
     &-title {
         row-gap: 2rem;
+        h3{
+            font-family: $font-family-Bold;
+            @media (min-width: 1250px) {
+                font-size: 3.75rem;
+            }
+        }
         h2 {
             font-family: $font-family-Bold;
             @media (min-width: 1250px) {
@@ -1919,6 +2206,12 @@ button.back-to-top.show:active {
             }
             font-family: $font-family-Bold;
         }
+        span{
+            @media (min-width: 768px) {
+                font-size: 1.25rem;
+            }
+            font-family: $font-family-medium;
+        }
     }
     .counters{
         h6{
@@ -1939,5 +2232,9 @@ button.back-to-top.show:active {
         .counter-name{
             font-family: $font-family-medium;
         }
+    }
+    .line-gradient{
+        height: 2px;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #01F5F6 52.21%, rgba(153, 153, 153, 0) 100%);
     }
 }

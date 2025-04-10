@@ -2218,6 +2218,260 @@ html[dir=ltr] .our-projects-card .card-header img {
 }
 
 /*-----------------------
+    services
+-------------------------*/
+.services-info-section {
+  padding-block: 80px;
+}
+.services-info-section .service-info h3 {
+  max-width: 80%;
+  font-size: 64px;
+  font-weight: 800;
+  font-family: "Tajawal-Bold", sans-serif;
+  background: linear-gradient(to right, #7c44dd, #01f7f8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1200px) {
+  .services-info-section .service-info h3 {
+    font-size: 56px;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-info-section .service-info h3 {
+    font-size: 36px;
+    text-align: center;
+    padding-block: 20px;
+  }
+}
+.services-info-section .service-info p {
+  margin-block-start: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  max-width: 70%;
+}
+@media (max-width: 1200px) {
+  .services-info-section .service-info p {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.services-info-section .service-card-info {
+  border-radius: 16px;
+  color: #000;
+  padding: 20px;
+  margin-block-start: 20px;
+}
+.services-info-section .service-card-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.services-info-section .service-card-info p {
+  margin-block-start: 10px;
+  font-size: 16px;
+}
+.services-info-section .service-card-info.odd {
+  background: linear-gradient(to right, #7e8cff, #ffffff);
+}
+.services-info-section .service-card-info.even {
+  background: linear-gradient(to right, #8dffff, #c9ffff, #ffffff);
+}
+@media (max-width: 767.98px) {
+  .services-info-section {
+    font-size: 32px;
+    padding-block: 20px;
+  }
+}
+
+.services-steps-section {
+  padding-block: 60px;
+  padding-inline: 60px;
+  /* Stage Column Styles */
+  /* Stage Header Styles */
+  /* Stage Card Styles */
+  /* Card Colors and Hover States */
+  /* Responsive Adjustments */
+}
+.services-steps-section .stages-container {
+  background-color: #060335;
+  max-width: 1400px;
+  padding: 30px 0;
+}
+.services-steps-section .stages-row {
+  padding-block: 20px;
+  padding-inline: 80px;
+}
+.services-steps-section .stage-column {
+  position: relative;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+.services-steps-section .stage-column::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #00b8d4;
+}
+.services-steps-section .stage-column:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #00b8d4;
+}
+.services-steps-section .stage-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+.services-steps-section .stage-card {
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Ensure content doesn't overflow during transition */
+  height: 80px; /* Set a fixed initial height */
+  display: flex;
+  align-items: center;
+  /* Default Content Styles */
+  /* Hover Content Styles */
+  /* Hover Effect */
+}
+.services-steps-section .stage-card .default-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  position: absolute;
+  width: calc(100% - 2rem); /* Account for padding */
+  height: 100%;
+}
+.services-steps-section .stage-card .default-content i {
+  font-size: 1.5rem;
+}
+.services-steps-section .stage-card .default-content span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.services-steps-section .stage-card .hover-content {
+  position: relative;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s; /* Slight delay for better effect */
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  padding-top: 20px; /* Space for default content */
+}
+.services-steps-section .stage-card .hover-content h5 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.services-steps-section .stage-card .hover-content p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.services-steps-section .stage-card .hover-content ul {
+  padding-right: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+.services-steps-section .stage-card:hover {
+  height: auto; /* Let the height adjust to content */
+  min-height: 250px; /* Set a minimum height to prevent too small cards */
+}
+.services-steps-section .stage-card:hover .default-content {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.services-steps-section .stage-card:hover .hover-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.services-steps-section .stage-card-empty {
+  height: 60px; /* Set a fixed initial height */
+  width: 100%;
+}
+.services-steps-section .exploration {
+  background-color: #28a745;
+}
+.services-steps-section .exploration:hover {
+  background-color: #218838;
+}
+.services-steps-section .planning {
+  background-color: #dc3545;
+}
+.services-steps-section .planning:hover {
+  background-color: #c82333;
+}
+.services-steps-section .design {
+  background-color: #7b1fa2;
+}
+.services-steps-section .design:hover {
+  background-color: #6a1b9a;
+}
+.services-steps-section .development {
+  background-color: #e65100;
+}
+.services-steps-section .development:hover {
+  background-color: #d84315;
+}
+.services-steps-section .testing {
+  background-color: #0288d1;
+}
+.services-steps-section .testing:hover {
+  background-color: #0277bd;
+}
+.services-steps-section .launch {
+  background-color: #1a237e;
+}
+.services-steps-section .launch:hover {
+  background-color: #0d1257;
+}
+@media (max-width: 992px) {
+  .services-steps-section .services-steps-section {
+    padding-inline: 10px !important;
+  }
+  .services-steps-section .stages-row {
+    flex-direction: column;
+    padding-inline: 20px !important;
+  }
+  .services-steps-section .stage-column {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 2rem;
+  }
+  .services-steps-section .stage-column::after {
+    display: none;
+  }
+  .services-steps-section .stage-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .services-steps-section .stage-card-empty {
+    height: 0px; /* Set a fixed initial height */
+    width: 100%;
+  }
+}
+
+/*-----------------------
     Innovate Code Launch
 -------------------------*/
 .innovate-code-launch .custome-row-gap {
@@ -2225,6 +2479,14 @@ html[dir=ltr] .our-projects-card .card-header img {
 }
 .innovate-code-launch-title {
   row-gap: 2rem;
+}
+.innovate-code-launch-title h3 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 1250px) {
+  .innovate-code-launch-title h3 {
+    font-size: 3.75rem;
+  }
 }
 .innovate-code-launch-title h2 {
   font-family: "Tajawal-Bold", sans-serif;
@@ -2272,6 +2534,14 @@ html[dir=ltr] .innovate-code-launch-title h2 span::after {
     font-size: 1.25rem;
   }
 }
+.innovate-code-launch-title span {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+@media (min-width: 768px) {
+  .innovate-code-launch-title span {
+    font-size: 1.25rem;
+  }
+}
 .innovate-code-launch .counters h6 {
   line-height: normal;
   background: linear-gradient(270deg, #7C44DD 0%, #01F7F8 100%);
@@ -2293,4 +2563,8 @@ html[dir=ltr] .innovate-code-launch-title h2 span::after {
 }
 .innovate-code-launch .counters .counter-name {
   font-family: "Tajawal-Medium", sans-serif;
+}
+.innovate-code-launch .line-gradient {
+  height: 2px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #01F5F6 52.21%, rgba(153, 153, 153, 0) 100%);
 }/*# sourceMappingURL=general.css.map */
