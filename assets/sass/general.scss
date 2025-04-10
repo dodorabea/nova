@@ -989,6 +989,9 @@ header {
     .titel {
         font-size: 2.5rem;
         font-family: $font-family-Bold;
+        &.primary-text{
+            color: map_get($theme-colors, primary-color);
+        }
     }
 
     &-card {
@@ -1403,7 +1406,8 @@ button.back-to-top.show:active {
     Contact
 -------------------------*/
 .contact-section {
-    .title-section-part {
+    padding-block-end: 40px;
+    .contact-section-part {
         .title-section {
             padding-block: 25px;
             font-size: 64px;

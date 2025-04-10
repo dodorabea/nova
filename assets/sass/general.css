@@ -1445,6 +1445,9 @@ html[dir=ltr] .nava-section-image::after {
   font-size: 2.5rem;
   font-family: "Tajawal-Bold", sans-serif;
 }
+.customer-reviews .titel.primary-text {
+  color: #3F3FD5;
+}
 .customer-reviews-card {
   border-radius: 1rem;
   padding: 2rem 1.5rem 4rem 1.5rem;
@@ -1786,7 +1789,10 @@ button.back-to-top.show:active {
 /*-----------------------
     Contact
 -------------------------*/
-.contact-section .title-section-part .title-section {
+.contact-section {
+  padding-block-end: 40px;
+}
+.contact-section .contact-section-part .title-section {
   padding-block: 25px;
   font-size: 64px;
   font-weight: 800;
@@ -1797,21 +1803,21 @@ button.back-to-top.show:active {
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 767.98px) {
-  .contact-section .title-section-part .title-section {
+  .contact-section .contact-section-part .title-section {
     font-size: 32px;
     padding-block: 20px;
   }
 }
-.contact-section .title-section-part .title-section-img {
+.contact-section .contact-section-part .title-section-img {
   width: 500px;
   margin-inline: auto;
 }
 @media (max-width: 767.98px) {
-  .contact-section .title-section-part .title-section-img {
+  .contact-section .contact-section-part .title-section-img {
     width: 250px;
   }
 }
-.contact-section .title-section-part .title-section-para {
+.contact-section .contact-section-part .title-section-para {
   font-family: "Tajawal-Bold", sans-serif;
   font-size: 24px;
   max-width: 80%;
@@ -1819,12 +1825,12 @@ button.back-to-top.show:active {
   margin-block: 20px;
 }
 @media (max-width: 767.98px) {
-  .contact-section .title-section-part .title-section-para {
+  .contact-section .contact-section-part .title-section-para {
     font-size: 16px;
     padding-block: 10px;
   }
 }
-.contact-section .title-section-part .contact-us-btn {
+.contact-section .contact-section-part .contact-us-btn {
   margin-inline: auto;
   color: #000;
   font-weight: bold;
