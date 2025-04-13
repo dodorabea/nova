@@ -1791,6 +1791,15 @@ button.back-to-top.show:active {
 .breadcrumb-section .breadcrumb-item {
   font-size: 0.849rem;
 }
+.breadcrumb-section span.around-span {
+  font-size: 1rem;
+  border: 0.5px solid #808080;
+  block-size: 30px;
+  min-inline-size: 70px;
+  border-radius: 2.5rem;
+  padding-inline: 10px;
+  padding-block: 4px;
+}
 
 /*-----------------------
     Technical Skills
@@ -2796,4 +2805,140 @@ html[dir=ltr] .innovate-code-launch-title h2 span::after {
 }
 .about-project-details-card .card-text .text h6 {
   font-family: "Tajawal-Medium", sans-serif;
+}
+
+/*-----------------------
+   Blog Article
+-------------------------*/
+.blog-article .title {
+  color: #000000;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 767.98px) {
+  .blog-article .title {
+    font-size: 2.125rem;
+  }
+}
+.blog-article-image {
+  height: 265px;
+}
+.blog-article-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-article-text {
+  row-gap: 1.5rem;
+}
+.blog-article-text h5 {
+  color: #3F3FD5;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .blog-article-text h5 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .blog-article-text h5 {
+    font-size: 1.5rem;
+  }
+}
+.blog-article-text p {
+  color: #000000;
+  font-size: 1.5rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .blog-article-text p {
+    padding-inline-end: 10%;
+  }
+}
+.blog-article-text .span-block span {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+.blog-article-text .btn-discovery {
+  min-height: 55px;
+  min-inline-size: 234px;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.blog-article-text .btn-discovery span, .blog-article-text .btn-discovery img {
+  transition: all 1s ease-out;
+}
+.blog-article-text .btn-discovery:not(:hover) {
+  background: rgba(125, 125, 255, 0.2901960784);
+  color: #000000;
+}
+.blog-article-text .btn-discovery:not(:hover) img {
+  display: none;
+}
+.blog-article-text .btn-discovery:hover {
+  background: #3131FF;
+  color: #fff;
+}
+.blog-article-text .btn-discovery:hover img {
+  display: block;
+}
+.blog-article-card p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 768px) {
+  .blog-article-card p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .blog-article-card p {
+    font-size: 1rem;
+  }
+}
+.blog-article-card .card-header {
+  padding: 4.5rem 1rem 2rem 1rem;
+  border-radius: 1.5rem;
+  background: url(../image/img/card-image.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.blog-article-card .card-header p {
+  min-height: 60px;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-article-card .card-body {
+  padding: 0rem 1rem 1rem 1rem;
+}
+.blog-article-card .card-body span {
+  font-family: "Tajawal-Medium", sans-serif;
+}
+
+.pagination-number {
+  border: 0.7px solid rgba(0, 0, 0, 0.3882352941);
+  max-width: 200px;
+  min-height: 60px;
+  border-radius: 130px;
+  margin: 0 auto -30px auto;
+}
+.pagination-number .swiper-button-next:after, .pagination-number .swiper-rtl .swiper-button-prev:after,
+.pagination-number .swiper-button-prev:after, .pagination-number .swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  height: auto;
+  color: #000;
+}
+.pagination-number .swiper-button-next, .pagination-number .swiper-button-prev,
+.pagination-number .swiper-button-next, .pagination-number .swiper-button-prev {
+  height: auto;
+  bottom: 0;
+  top: 0;
+  margin: 0;
+}
+.pagination-number .swiper-pagination-fraction {
+  color: #000;
+  bottom: 0;
+  font-size: 24px;
+  width: 60%;
 }/*# sourceMappingURL=general.css.map */

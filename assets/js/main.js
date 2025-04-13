@@ -96,4 +96,15 @@
       prevEl: ".swiper-button-prev",
     },
   });
+/*====Text Slider==== */
+  var swiperSimilarProject = new Swiper(".mySwiper.similar-proj-slider", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 })(jQuery);
