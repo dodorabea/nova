@@ -1447,7 +1447,7 @@ html[dir=ltr] .nava-section-image::after {
 }
 @media (min-width: 992px) {
   .similar-project-bg-gradient h2 {
-    font-size: 3.5rem;
+    font-size: 3.125rem;
   }
 }
 .similar-project-bg-gradient p {
@@ -1613,6 +1613,15 @@ html[dir=ltr] .nava-section-image::after {
 @media (max-width: 767.98px) {
   .blog-section-title p {
     font-size: 1rem;
+  }
+}
+.blog-section-title h3 {
+  font-family: "Tajawal-Bold", sans-serif;
+  color: #01F5F6;
+}
+@media (min-width: 768px) {
+  .blog-section-title h3 {
+    font-size: 2rem;
   }
 }
 .blog-section-card p {
@@ -2941,4 +2950,31 @@ html[dir=ltr] .innovate-code-launch-title h2 span::after {
   bottom: 0;
   font-size: 24px;
   width: 60%;
+}
+
+/*-----------------------
+blog-details-description
+-------------------------*/
+.blog-details-description-item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.blog-details-description-item h3 {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+@media (min-width: 992px) {
+  .blog-details-description-item h3 {
+    font-size: 2.125rem;
+    padding-inline-end: 25%;
+  }
+}
+.blog-details-description-item p {
+  font-family: "Tajawal-Bold", sans-serif;
+}
+.blog-details-description-item p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.gradient-bg-similar-project {
+  border-radius: 1.5rem;
+  background: linear-gradient(90deg, #008989 0%, #11117A 72.5%, #3F3FD5 100%);
 }/*# sourceMappingURL=general.css.map */

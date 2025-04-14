@@ -989,7 +989,7 @@ header {
         h2{
             font-family: $font-family-Bold;
             @media (min-width: 992px) {
-                font-size: 3.5rem;
+                font-size: 3.125rem;
             }
         }
         p{
@@ -1197,6 +1197,13 @@ header {
             @media (max-width: 767.98px) {
                 font-size: 1rem;
             }
+        }
+        h3{
+            @media (min-width: 768px) {
+                font-size: 2rem;
+            }
+            font-family: $font-family-Bold;
+            color: map_get($theme-colors, secondary);
         }
     }
 
@@ -2600,4 +2607,33 @@ button.back-to-top.show:active {
         font-size: 24px;
         width: 60%;
     }
+}
+/*-----------------------
+blog-details-description
+-------------------------*/
+.blog-details-description{
+    &-item{
+        &:not(:last-child)
+        {
+            margin-bottom: 3rem;
+        }
+        h3{
+            font-family: $font-family-Bold;
+            @media (min-width: 992px) {
+                font-size: 2.125rem;
+                padding-inline-end: 25%;
+            }
+        }
+        p{
+            &:not(:last-child)
+            {
+                margin-bottom: 1rem;
+            }
+            font-family: $font-family-Bold;
+        }
+    }
+}
+.gradient-bg-similar-project{
+    border-radius: 1.5rem;
+    background: linear-gradient(90deg, #008989 0%, #11117A 72.5%, #3F3FD5 100%);
 }
