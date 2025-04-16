@@ -1454,50 +1454,43 @@ button.back-to-top.show:active {
     padding-block-end: 40px;
     .contact-section-part {
         .title-section {
-            padding-block: 25px;
-            font-size: 64px;
-            font-weight: 800;
             font-family: $font-family-Bold;
-            background: linear-gradient(to right, #7c44dd, #01f7f8);
+            background: linear-gradient(270deg, #01F7F8 0%, #7C44DD 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-
-            @media (max-width: 767.98px) {
-                font-size: 32px;
-                padding-block: 20px;
+            @media (min-width: 1200px) {
+               font-size: 3.5rem;
             }
+            
         }
 
         .title-section-img {
-            width: 500px;
+            width: 265px;
             margin-inline: auto;
-
-            @media (max-width: 767.98px) {
-                width: 250px;
-            }
         }
 
         .title-section-para {
-            font-family: $font-family-Bold;
-            font-size: 24px;
-            max-width: 80%;
             margin-inline: auto;
-            margin-block: 20px;
-
-            @media (max-width: 767.98px) {
-                font-size: 16px;
-                padding-block: 10px;
+            font-family: $font-family-Bold;
+            @media (min-width: 992px) {
+                padding-inline: 15%;
+                font-size: 1.35rem;
             }
         }
 
         .contact-us-btn {
             margin-inline: auto;
-            color: #000;
             font-weight: bold;
             padding: 5px 25px;
             border-radius: 20px;
             background-color: white;
+            &:not(:hover){
+                color: #000;
+            }
+            &:hover{
+                color: #fff;
+            }
         }
     }
 }
@@ -1990,7 +1983,8 @@ button.back-to-top.show:active {
     margin-block-start: 20px;
     h3 {
       font-size: 24px;
-      font-weight: 700;
+      font-family: $font-family-Bold;
+      color: rgb(0 0 0 / 80%);
     }
     p {
       margin-block-start: 10px;
@@ -2636,4 +2630,228 @@ blog-details-description
 .gradient-bg-similar-project{
     border-radius: 1.5rem;
     background: linear-gradient(90deg, #008989 0%, #11117A 72.5%, #3F3FD5 100%);
+}
+/*-----------------------
+    Our Services
+-------------------------*/
+.our-services{
+    &-title{
+        margin-bottom: 2.25rem;
+       span{
+        font-size: 1.5rem;
+        color: map_get($theme-colors, secondary);
+        font-family: $font-family-Bold;
+       }
+       h2{
+        line-height: normal;
+        background: linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+        background: -webkit-linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: $font-family-Bold;
+        @media (min-width: 1100px) {
+            font-size: 2.5rem;
+        }
+       }
+       p{
+        font-family: $font-family-medium;
+       }
+    }
+    &-card{
+        padding: 2rem 1.5rem;
+        border: 0.6px solid #3F3FD5;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        backdrop-filter: blur(134px);
+        border-radius: 1rem;
+        background: url(../image/img/shadow-bg.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        .text{
+            h4{
+                font-size: 1.5rem;
+                font-family: $font-family-Bold;
+                @media (min-width: 768px){
+                    display: -webkit-box;
+                    line-clamp: 2;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis; 
+                }
+            }
+            p{
+                font-family: $font-family-medium;
+            }
+        }
+    }
+}
+/*-----------------------
+    Service Benefits
+-------------------------*/
+.service-benefits{
+    &-card{
+        padding: 3rem;
+        border-radius: 2rem;
+        background: url(../image/img/service-benefits.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .card-text{
+            @media (min-width: 768px) {
+                row-gap: 3rem;
+            }
+            h3{
+                @media (min-width: 768px) {
+                    font-size: 3rem;
+                }
+                font-family: $font-family-Bold;
+            }
+            .btn-contact-btn{
+                min-height: 47px;
+                background: map_get($theme-colors, secondary);
+                &:not(:hover){
+                    color: #000000;
+                }
+            }
+        }
+        ul{
+            row-gap: 2rem;
+            @media (min-width: 992px) {
+               padding-inline-start: 10%;
+            }
+            li{
+                &::after{
+                    content: '';
+                    @include position(absolute, 0, 0, 0, unset);
+                    background: url(../image/icon/check.svg);
+                    background-repeat: no-repeat;
+                    background-size: 1.8rem;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border-radius: 100%;
+                }
+                padding-inline-start: 2.5rem;
+                p{
+                    font-family: $font-family-medium;
+                }
+            }
+        }
+    }
+}
+/*-----------------------
+    card-section-part
+-------------------------*/
+.card-section-part{
+    .text-part{
+        row-gap: 2rem;
+        h3{
+            line-height: normal;
+            background: linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+            background: -webkit-linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @media (min-width: 768px) {
+                font-size: 2.5rem;
+            } 
+            font-family: $font-family-Bold;
+        }
+        p{
+            font-size: 1.25rem;
+        }
+        .btn-contact-btn{
+            background: map_get($theme-colors, secondary);
+            min-height: 47px;
+            &:not(:hover){
+                color: #000;
+            }
+        }
+    }
+    .card{
+        background: linear-gradient(103.24deg, #7E8CFF 4.5%, #FFFFFF 100%);
+        border-radius: 1rem;
+        padding: 1.5rem 1rem;
+        h4{
+            font-size: 1.125rem;
+            font-family: $font-family-Bold;
+        }
+        p{
+            font-size: 0.849rem;
+        }
+    }
+    .flex-responsive{
+        @media (min-width: 768px) {
+            display: flex;
+        }
+        @media (max-width: 767.98px) {
+            display: block;
+        }
+        .col{
+            @media (max-width: 767.98px) {
+               margin-bottom: 1rem;
+            }
+        }
+    }
+}
+/*-----------------------
+    Service Focus
+-------------------------*/
+.service-focus{
+   h3{
+    line-height: normal;
+    background: linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+    background: -webkit-linear-gradient(90deg, #7C44DD 0%, #01F7F8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $font-family-Bold;
+    @media (min-width: 768px) {
+        font-size: 2.25rem;
+    }
+   }
+   
+   &-card{
+    .header-part{
+        h4{
+            font-size: 1.5rem;
+            font-family: $font-family-Bold;
+        }
+    }
+    .body-part{
+        p{
+            padding: 0.5rem 1rem;
+            font-size: 0.768rem;
+            min-height: 45px;
+            border-radius: 50px;
+            font-family: $font-family-medium;; 
+            &:not(.active){
+                border: 1px solid #D7D7D7;
+            }
+            &.active{
+                background: linear-gradient(90deg, #172E60 0%, #407BFF 100%);
+            }
+            
+        }
+    }
+   }
+   .col{
+ @media (min-width: 992px){
+    border-inline-start: 1px solid rgb(63 63 213 / 18%);
+    border-inline-end: 1px solid rgb(63 63 213 / 18%);
+    border-radius: 8px 8px 0 0;
+}
+  
+    &:last-child,
+    &:first-child{
+        border-radius: 0 !important;
+        border-color: transparent !important;
+    }
+    &:last-child{
+        p{
+            &.active{
+                background: linear-gradient(90deg, #001442 0%, #007878 100%);
+            }
+        }
+    }
+   }
 }
