@@ -33,7 +33,7 @@
     <!-- ============================================================== -->
     <!-- Header -->
     <!-- ============================================================== -->
-    <header>
+    <header data-lenis-prevent>
         <div class="container">
             <div class="row">
                 <div class="col-lg col-2">
@@ -46,10 +46,20 @@
                                 </a>
                             </li>
                             <li class="position-relative">
-                                <a href="#" class="btn hover-button p-0">
-                                    <span class="top content">الخدمات</span>
-                                    <span class="bottom content">الخدمات</span>
-                                </a>
+                                <div class="dropdown">
+                                    <a href="#" class="btn hover-button p-0 dropdown-toggle d-flex flex-row-reverse align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="top content">الخدمات</span>
+                                        <span class="bottom content">الخدمات</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                      <li class="mb-1"><a class="dropdown-item" href="#">تصميم مواقع</a></li>
+                                      <li class="mb-1"><a class="dropdown-item" href="#">استضافة الويب</a></li>
+                                      <li class="mb-1"><a class="dropdown-item" href="#">تصميم مواقع</a></li>
+                                      <li class="mb-1"><a class="dropdown-item" href="#">تصميم مواقع</a></li>
+                                      <li class="mb-1"><a class="dropdown-item" href="#">استضافة الويب</a></li>
+                                      <li class="mb-1"><a class="dropdown-item" href="#">تصميم مواقع</a></li>
+                                    </ul>
+                                  </div>
                             </li>
                             <li class="position-relative">
                                 <a href="projects.html" class="btn hover-button p-0">
@@ -62,6 +72,10 @@
                                     <span>تواصل معنا</span>
                                 </a>
                             </li>
+                            <li class="position-relative d-lg-none d-sm-block">
+                                <a href="#" class="btn btn-language text-white">english</a>
+                            </li>
+                           
                         </ul>
                         <div class="menu-toggle">&#9776;</div>
                     </nav>
@@ -73,11 +87,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg d-lg-flex d-none  justify-content-end">
+                <div class="col-lg d-lg-flex d-none align-items-center gap-3 justify-content-end">
                     <button class="btn btn-contact-btn border-0 d-flex align-items-center justify-content-center gap-2">
                         <span>تواصل معنا</span>
                         <img width="24px" src="assets/image/icon/Arrow left-circle.svg" alt="icon" />
                     </button>
+                    <a href="#" class="btn btn-language text-white">english</a>
                 </div>
             </div>
         </div>

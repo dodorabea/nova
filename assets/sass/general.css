@@ -746,6 +746,27 @@ header .contact-link {
   font-size: 1.3rem;
 }
 
+.btn-language {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-family: "Tajawal-Bold", sans-serif;
+}
+
+.dropdown-toggle::after {
+  margin-top: 7px;
+  border-top: 0.2em solid;
+  border-left: 0.2em solid transparent;
+  border-bottom: 0;
+  border-right: 0.2em solid transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  font-family: "Tajawal-Medium", sans-serif;
+}
+
 /*-----------------------
     Banner Section
 -------------------------*/
