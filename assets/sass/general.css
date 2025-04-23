@@ -631,6 +631,12 @@ input {
 .btn-contact-btn img {
   transition: all 1s ease-out;
 }
+html[dir=ltr] .btn-contact-btn img {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .btn-contact-btn img {
+  transform: scaleX(1);
+}
 @media (max-width: 767.98px) {
   .btn-contact-btn img {
     display: none;
@@ -720,7 +726,6 @@ header .menu-toggle {
     height: 100vh;
     padding: 20px;
     border-radius: 5px;
-    transform: translateX(-100%);
     /* Initially hidden */
     transition: transform 0.5s ease-in-out;
   }
@@ -731,6 +736,12 @@ header .menu-toggle {
   html[dir=ltr] header .nav-links {
     right: 0;
     left: unset;
+  }
+  html[dir=ltr] header .nav-links:not(.active) {
+    transform: translateX(100%);
+  }
+  html[dir=rtl] header .nav-links:not(.active) {
+    transform: translateX(-100%);
   }
   header .menu-toggle {
     display: block;
@@ -1024,6 +1035,13 @@ header .contact-link {
 .support-message .content {
   row-gap: 2.5rem;
 }
+.support-message .titel-section {
+  background: linear-gradient(45deg, #7C44DD 10%, #01F7F8 100%) !important;
+  background: -webkit-linear-gradient(45deg, #7C44DD 10%, #01F7F8 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 .support-message-card {
   padding: 1.5rem 1rem;
   border-radius: 1rem;
@@ -1038,12 +1056,6 @@ header .contact-link {
 }
 .support-message-card .text h4 {
   font-family: "Tajawal-Bold", sans-serif;
-  display: -webkit-box;
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .support-message-card:not(:hover) {
   background: rgba(63, 63, 213, 0.3);
@@ -1082,22 +1094,10 @@ header .contact-link {
 }
 .user-guidance .user-guidance-card h4 {
   font-size: 1.5rem;
-  display: -webkit-box;
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-family: "Tajawal-Bold", sans-serif;
 }
 .user-guidance .user-guidance-card p {
   font-family: "Tajawal-Medium", sans-serif;
-  display: -webkit-box;
-  line-clamp: 5;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .user-guidance .user-guidance-card .icon {
   width: 50px;
@@ -1311,23 +1311,11 @@ header .contact-link {
   background: -webkit-linear-gradient(270deg, #0202C8 73.74%, #0270DE 83.93%, #01F7F8 100%);
 }
 .why-choose-our-tech .why-box h4 {
-  display: -webkit-box;
-  line-clamp: 1;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-family: "Tajawal-Medium", sans-serif;
 }
 .why-choose-our-tech .why-box p {
   color: #B4B4B4;
   font-size: 0.875rem;
-  display: -webkit-box;
-  line-clamp: 4;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-family: "Tajawal-Medium", sans-serif;
 }
 
@@ -1495,6 +1483,10 @@ html[dir=ltr] .nava-section-image::after {
 /*-----------------------
     Customer Reviews
 -------------------------*/
+html[dir=ltr] .customer-reviews .gap-5 {
+  gap: 0rem !important;
+}
+
 .customer-reviews .titel {
   font-size: 2.5rem;
   font-family: "Tajawal-Bold", sans-serif;
@@ -1551,6 +1543,12 @@ html[dir=ltr] .nava-section-image::after {
   border-radius: 100%;
   color: #fff;
   background: #3F3FD5;
+}
+html[dir=ltr] .customer-reviews .arrow-slider .swiper-btn {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .customer-reviews .arrow-slider .swiper-btn {
+  transform: scaleX(1);
 }
 .customer-reviews .arrow-slider .swiper-btn::after, .customer-reviews .arrow-slider .swiper-btn::before {
   font-size: 1.125rem;
@@ -1971,12 +1969,20 @@ button.back-to-top.show:active {
 }
 .contact-form-section:after {
   content: "";
-  top: 0;
   height: 100%;
   width: 25%;
-  left: 0;
   position: absolute;
+  top: 0;
+  bottom: 0;
   background-color: #01f5f6;
+}
+html[dir=rtl] .contact-form-section:after {
+  right: unset;
+  left: 0;
+}
+html[dir=ltr] .contact-form-section:after {
+  right: 0;
+  left: unset;
 }
 
 /*-----------------------
@@ -2959,6 +2965,14 @@ html[dir=ltr] .innovate-code-launch-title h2 span::after {
   bottom: 0;
   top: 0;
   margin: 0;
+}
+html[dir=ltr] .pagination-number .swiper-button-next, html[dir=ltr] .pagination-number .swiper-button-prev,
+html[dir=ltr] .pagination-number .swiper-button-next, html[dir=ltr] .pagination-number .swiper-button-prev {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .pagination-number .swiper-button-next, html[dir=rtl] .pagination-number .swiper-button-prev,
+html[dir=rtl] .pagination-number .swiper-button-next, html[dir=rtl] .pagination-number .swiper-button-prev {
+  transform: scaleX(1);
 }
 .pagination-number .swiper-pagination-fraction {
   color: #000;

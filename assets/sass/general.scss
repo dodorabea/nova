@@ -185,7 +185,7 @@ input {
     img {
         -webkit-transition: all 1s ease-out;
         transition: all 1s ease-out;
-
+        @include rtl(transform, scaleX(-1), scaleX(1));
         @media (max-width: 767.98px) {
             display: none;
         }
@@ -275,9 +275,12 @@ header {
             height: 100vh;
             padding: 20px;
             border-radius: 5px;
-            transform: translateX(-100%);
+           
             /* Initially hidden */
             transition: transform 0.5s ease-in-out;
+            &:not(.active){
+                @include rtl(transform, translateX(100%), translateX(-100%));
+            }
         }
 
         .menu-toggle {
@@ -502,7 +505,13 @@ header {
     .content {
         row-gap: 2.5rem;
     }
-
+    .titel-section {
+        background: linear-gradient(45deg, #7C44DD 10%, #01F7F8 100%) !important;
+        background: -webkit-linear-gradient(45deg, #7C44DD 10%, #01F7F8 100%) !important;
+        background-clip: text !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+    }
     &-card {
         padding: 1.5rem 1rem;
         border-radius: 1rem;
@@ -520,12 +529,6 @@ header {
         .text {
             h4 {
                 font-family: $font-family-Bold;
-                display: -webkit-box;
-                line-clamp: 1;
-                -webkit-line-clamp: 1;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
         }
 
@@ -571,23 +574,11 @@ header {
 
         h4 {
             font-size: 1.5rem;
-            display: -webkit-box;
-            line-clamp: 1;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
             font-family: $font-family-Bold;
         }
 
         p {
             font-family: $font-family-medium;
-            display: -webkit-box;
-            line-clamp: 5;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .icon {
@@ -844,24 +835,12 @@ header {
         }
 
         h4 {
-            display: -webkit-box;
-            line-clamp: 1;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
             font-family: $font-family-medium;
         }
 
         p {
             color: map_get($theme-colors, text-color);
             font-size: 0.875rem;
-            display: -webkit-box;
-            line-clamp: 4;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
             font-family: $font-family-medium;
         }
     }
@@ -1030,6 +1009,14 @@ header {
 /*-----------------------
     Customer Reviews
 -------------------------*/
+html[dir="ltr"]{
+    .customer-reviews{
+        .gap-5 {
+            gap: 0rem !important;
+        }
+    }
+   
+}
 .customer-reviews {
     .titel {
         font-size: 2.5rem;
@@ -1108,7 +1095,7 @@ header {
             border-radius: 100%;
             color: #fff;
             background: map_get($theme-colors, primary-color);
-
+            @include rtl(transform, scaleX(-1), scaleX(1));
             &::after,
             &::before {
                 font-size: 1.125rem;
@@ -1593,11 +1580,9 @@ button.back-to-top.show:active {
 
     &:after {
         content: "";
-        top: 0;
         height: 100%;
         width: 25%;
-        left: 0;
-        position: absolute;
+        @include position(absolute, 0, unset, 0, 0);
         background-color: #01f5f6;
     }
 }
@@ -2611,6 +2596,7 @@ button.back-to-top.show:active {
         bottom: 0;
         top: 0;
         margin: 0;
+        @include rtl(transform, scaleX(-1), scaleX(1));
     }
     .swiper-pagination-fraction{
         color: #000;
